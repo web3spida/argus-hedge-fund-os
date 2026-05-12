@@ -1,0 +1,23 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="360" fill="#05060A"/>
+  <rect x="32" y="32" width="296" height="296" fill="#0B0F16" stroke="#2A2F39" stroke-width="2"/>
+  <path d="M180 78L278 180L180 282L82 180L180 78Z" fill="#111720" stroke="#F0A500" stroke-width="10"/>
+  <path d="M180 113L245 180L180 247L115 180L180 113Z" fill="#05060A" stroke="#4D8EFF" stroke-width="6"/>
+  <circle cx="180" cy="180" r="32" fill="#F0A500"/>
+  <circle cx="180" cy="180" r="12" fill="#05060A"/>
+  <path d="M180 54V92" stroke="#F0A500" stroke-width="10" stroke-linecap="square"/>
+  <path d="M180 268V306" stroke="#F0A500" stroke-width="10" stroke-linecap="square"/>
+  <path d="M54 180H92" stroke="#F0A500" stroke-width="10" stroke-linecap="square"/>
+  <path d="M268 180H306" stroke="#F0A500" stroke-width="10" stroke-linecap="square"/>
+  <circle cx="180" cy="54" r="10" fill="#16C784"/>
+  <circle cx="306" cy="180" r="10" fill="#16C784"/>
+  <circle cx="180" cy="306" r="10" fill="#16C784"/>
+  <circle cx="54" cy="180" r="10" fill="#16C784"/>
+  <path d="M386 111H452L548 249H489L471 221H365L347 249H290L386 111ZM389 181H447L418 136L389 181Z" fill="#F7F9FC"/>
+  <path d="M568 111H620V249H568V111Z" fill="#F7F9FC"/>
+  <path d="M650 111H788C823 111 845 132 845 164C845 187 834 204 814 212L851 249H789L757 218H702V249H650V111ZM702 153V177H776C786 177 793 172 793 165C793 158 786 153 776 153H702Z" fill="#F7F9FC"/>
+  <path d="M942 106C1004 106 1042 135 1042 180C1042 226 1004 254 942 254C879 254 841 226 841 180C841 135 879 106 942 106ZM942 151C911 151 893 162 893 180C893 199 911 210 942 210C972 210 990 199 990 180C990 162 972 151 942 151Z" fill="#F7F9FC"/>
+  <path d="M1062 111H1114V203H1190V249H1062V111Z" fill="#F0A500"/>
+  <path d="M386 284H416V296H386V284ZM438 284H468V296H438V284ZM490 284H520V296H490V284ZM542 284H572V296H542V284ZM594 284H624V296H594V284Z" fill="#F0A500"/>
+  <text x="650" y="299" fill="#8E9AAF" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="700" letter-spacing="8">AI HEDGE FUND OS</text>
+</svg>

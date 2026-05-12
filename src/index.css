@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Backgrounds — layered depth */
+  --bg-void:      #05060A;
+  --bg-base:      #080B12;
+  --bg-elevated:  #0D1118;
+  --bg-overlay:   #131820;
+  --bg-frosted:   rgba(13, 17, 24, 0.4);
+
+  /* Borders */
+  --border-dim:    rgba(255, 255, 255, 0.04);
+  --border-soft:   rgba(255, 255, 255, 0.07);
+  --border-med:    rgba(255, 255, 255, 0.11);
+  --border-bright: rgba(255, 255, 255, 0.18);
+
+  /* Primary accent — Amber Gold */
+  --accent:        #F0A500;
+  --accent-dim:    rgba(240, 165, 0, 0.08);
+  --accent-glow:   rgba(240, 165, 0, 0.15);
+  --accent-border: rgba(240, 165, 0, 0.25);
+
+  /* Semantic colors */
+  --green:        #16C784;
+  --green-dim:    rgba(22, 199, 132, 0.1);
+  --red:          #EA3943;
+  --red-dim:      rgba(234, 57, 67, 0.1);
+  --blue:         #4D8EFF;
+  --blue-dim:     rgba(77, 142, 255, 0.1);
+  --violet:       #8B5CF6;
+  --violet-dim:   rgba(139, 92, 246, 0.1);
+
+  /* Text hierarchy */
+  --text-primary:   #EEF2F7;
+  --text-secondary: #8A95A3;
+  --text-muted:     #4A5568;
+  --text-ghost:     #2D3748;
+
+  /* Data visualization palette */
+  --data-1: #F0A500;
+  --data-2: #4D8EFF;
+  --data-3: #8B5CF6;
+  --data-4: #16C784;
+  --data-5: #2D3748;
+
+  /* Fonts */
+  --font-display: "Syne", sans-serif;
+  --font-mono:    "JetBrains Mono", monospace;
+  --font-body:    "DM Sans", sans-serif;
+}
+
+@theme {
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+  --font-body: var(--font-body);
+  --color-bg-void: var(--bg-void);
+  --color-bg-base: var(--bg-base);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-overlay: var(--bg-overlay);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-accent-glow: var(--accent-glow);
+  --color-accent-border: var(--accent-border);
+  --color-green: var(--green);
+  --color-red: var(--red);
+  --color-blue: var(--blue);
+  --color-violet: var(--violet);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-ghost: var(--text-ghost);
+  --color-border-dim: var(--border-dim);
+  --color-border-soft: var(--border-soft);
+  --color-border-med: var(--border-med);
+  --color-border-bright: var(--border-bright);
+}
+
+body {
+  background: radial-gradient(circle at 50% -20%, #1a1e29 0%, var(--bg-void) 40%, var(--bg-void) 100%);
+  background-color: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-med);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-bright);
+}
+
+.noise-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-image: url("/noise.svg");
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+}
+
+.ambient-glow {
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+  filter: blur(140px);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.panel {
+  background: rgba(13, 17, 24, 0.35);
+  backdrop-filter: blur(32px) saturate(120%);
+  -webkit-backdrop-filter: blur(32px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.25rem;
+  box-shadow: 
+    0 16px 40px -8px rgba(0, 0, 0, 0.6), 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.glow-text {
+  text-shadow: 0 0 20px var(--accent-glow);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
