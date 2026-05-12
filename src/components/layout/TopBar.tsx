@@ -17,8 +17,7 @@ export const TopBar = ({ onToggleMenu, onHome }: { onToggleMenu: () => void; onH
         </button>
 
         <button onClick={onHome} className="flex items-center gap-2 text-left">
-          <img src="/favicon.svg" alt="Argus logo" className="h-7 w-7" />
-          <span className="text-[16px] md:text-[20px] font-display font-black tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-glow glow-text">ARGUS</span>
+          <img src="/argus-logo.svg" alt="Argus AI Hedge Fund OS" className="h-9 w-auto max-w-[168px] object-contain" />
           <span className="hidden sm:inline-block px-1.5 py-0.5 rounded text-[8px] font-mono font-bold bg-accent/10 text-accent border border-accent/20">v1</span>
         </button>
         
