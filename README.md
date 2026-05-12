@@ -45,12 +45,51 @@ Create `.env.local` for local-only secrets:
 VITE_WALLETCONNECT_PROJECT_ID=your_walletconnect_project_id
 ```
 
+For Netlify, add the same value under:
+
+```text
+Site configuration -> Environment variables
+```
+
+Required Netlify variable:
+
+```text
+VITE_WALLETCONNECT_PROJECT_ID
+```
+
+Optional public metadata variables:
+
+```text
+VITE_APP_NAME
+VITE_APP_ENV
+```
+
+Do not add private SoSoValue, SoDEX, Gemini, or wallet signing secrets as `VITE_` variables. Anything prefixed with `VITE_` is bundled into the frontend and visible to users.
+
 ## Useful Commands
 
 ```bash
 npm run lint
 npm run build
 ```
+
+## Netlify Deployment
+
+This repo includes `netlify.toml` with the correct Vite deployment settings:
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Node version: `22`
+- SPA fallback: all routes redirect to `index.html`
+- Static asset cache headers
+- Basic browser security headers
+
+Recommended Netlify setup:
+
+1. Connect the GitHub repository to Netlify.
+2. Use the default settings from `netlify.toml`.
+3. Add `VITE_WALLETCONNECT_PROJECT_ID` in Netlify environment variables.
+4. Deploy.
 
 ## Documentation
 
